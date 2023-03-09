@@ -5,15 +5,23 @@ public class CustomArrayListApp {
         CustomArrayList<String> myStringListTest = new CustomArrayList<>();
         CustomArrayList<Integer> myIntegerListTest = new CustomArrayList<>();
 
-        myStringListTest.add("donde");
-        myStringListTest.add("habia");
-        myStringListTest.add("carne");
-        myStringListTest.add("que no vi");
-        myStringListTest.add("fue en el pueblo");
-        myStringListTest.add("seguro? no te creo");
+        myStringListTest.add("zero");
+        myStringListTest.add("one");
+        myStringListTest.add("two");
+        myStringListTest.add("three");
+        myStringListTest.add("four");
+        myStringListTest.add("five");
+        myStringListTest.add("six");
+        myStringListTest.add("seven");
         for(int x=0; x < myStringListTest.getSize(); x++){
             System.out.println(myStringListTest.get(x));
         }
+        System.out.println("--------------------");
+
+        for(int i =0; i <=15; i++){
+            myIntegerListTest.add(i);
+        }
+        myIntegerListTest.add(1111111111);
         myIntegerListTest.add(23);
         myIntegerListTest.add(34);
         myIntegerListTest.add(14);
