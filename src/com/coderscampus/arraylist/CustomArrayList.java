@@ -10,13 +10,12 @@ package com.coderscampus.arraylist;
         public boolean add(T item) {
             //Adding item if Array.length < quantity of items
             if (indexCount < items.length) {
-                items[indexCount] = item;
-                indexCount++;
+                addingElement(item);
             }
             //Overwriting Array size if quantity of items == to Array size
             //Creating new Array 1.8 bigger than the original and copying the old one values to the new one
-            //Assigning the new Array values to the original one
-            if (indexCount == items.length) {
+            //Assigning the new Array values to the original one and adding and item to the Array
+            else{
                 int x = 0;
                 Object[] newListItems = new Object[(int) Math.round(items.length *1.8)];
                 for (Object element : items) {
@@ -24,11 +23,18 @@ package com.coderscampus.arraylist;
                     x++;
                 }
                 items = newListItems;
+                addingElement(item);
             }
             return true;
         }
 
-            @Override
+        private void addingElement(T item) {
+            //Add element to the Array
+            items[indexCount] = item;
+            indexCount++;
+        }
+
+        @Override
             public int getSize() {
             //Returning the resultant array size
                 return indexCount;
