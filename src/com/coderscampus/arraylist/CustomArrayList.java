@@ -14,7 +14,7 @@ package com.coderscampus.arraylist;
             }
             //Overwriting Array size if quantity of items == to Array size
             //Creating new Array 1.8 bigger than the original and copying the old one values to the new one
-            //Assigning the new Array values to the original one and adding and item to the Array
+            //Assigning the new Array values to the original one and adding an item.
             else{
                 int x = 0;
                 Object[] newListItems = new Object[(int) Math.round(items.length *1.8)];
