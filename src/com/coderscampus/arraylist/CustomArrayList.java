@@ -8,7 +8,7 @@ package com.coderscampus.arraylist;
 
         @Override
         public boolean add(T item) {
-            //Adding item if Array.length < quantity of items
+            //Adding item if Array.length > quantity of items
             if (indexCount < items.length) {
                 addingElement(item);
             }
