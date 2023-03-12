@@ -13,23 +13,19 @@ public class CustomArrayListApp {
         myStringListTest.add("five");
         myStringListTest.add("six");
         myStringListTest.add("seven");
+        myStringListTest.add("eight");
+        myStringListTest.add("nine");
+        myStringListTest.add("ten");
+
+
         for(int x=0; x < myStringListTest.getSize(); x++){
             System.out.println(myStringListTest.get(x));
         }
-        System.out.println("--------------------");
 
-        for(int i =0; i <=15; i++){
-            myIntegerListTest.add(i);
-        }
-        myIntegerListTest.add(1111111111);
-        myIntegerListTest.add(23);
-        myIntegerListTest.add(34);
-        myIntegerListTest.add(14);
-        myIntegerListTest.add(37);
-        myIntegerListTest.add(33);
-        for (int x = 0; x < myIntegerListTest.getSize(); x++){
-            System.out.println(myIntegerListTest.get(x));
-        }
+        System.out.println("--------------------");
+        // Requesting an index out of the size of the list...
+        System.out.println(myStringListTest.get(-34));
+
 
 
         }

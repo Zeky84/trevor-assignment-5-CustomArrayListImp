@@ -1,23 +1,18 @@
 package com.coderscampus.arraylist;
 
     public class CustomArrayList<T> implements CustomList<T> {
-        Object[] items = new Object[3];
+        Object[] items = new Object[10];
 
-        //Counting the items adding to the Array
         int indexCount = 0;
 
         @Override
         public boolean add(T item) {
-            //Adding item if Array.length > quantity of items
             if (indexCount < items.length) {
                 addingElement(item);
             }
-            //Overwriting Array size if quantity of items == to Array size
-            //Creating new Array 1.8 bigger than the original and copying the old one values to the new one
-            //Assigning the new Array values to the original one and adding an item.
             else{
                 int x = 0;
-                Object[] newListItems = new Object[(int) Math.round(items.length *1.8)];
+                Object[] newListItems = new Object[items.length*2];
                 for (Object element : items) {
                     newListItems[x] = element;
                     x++;
@@ -42,6 +37,12 @@ package com.coderscampus.arraylist;
 
             @Override
             public T get(int index){
+            if (index > items.length || index < 0){
+                System.out.print("the index: " + index + " is out of range 0-"
+                        + items.length +" --> ");
+                return null;
+
+            }
             //Casting to the data type use and returning the specific item by index
                 return (T)items[index];
             }
