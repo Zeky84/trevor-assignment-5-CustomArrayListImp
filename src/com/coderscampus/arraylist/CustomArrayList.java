@@ -37,12 +37,6 @@ package com.coderscampus.arraylist;
 
             @Override
             public T get(int index){
-            if (index > items.length || index < 0){
-                System.out.print("the index: " + index + " is out of range 0-"
-                        + items.length +" --> ");
-                return null;
-
-            }
             //Casting to the data type use and returning the specific item by index
                 return (T)items[index];
             }
